@@ -16,13 +16,22 @@
 }
 
 .navbar-custom ul > li > a:hover, .navbar-custom ul > li > a:focus, .navbar-custom #sidemenu > ul > li > a:hover, .navbar-custom #sidemenu > ul > li > a:focus {
-   background:rgba(210,105,30, 0.18); text-shadow:none;
+   background:rgba(0,0,0, 0.18); text-shadow:none;
 
 }
 
 .navbar-custom #sidemenu > .navbar-nav {
     background-color: #F5F5F5;
 }
+
+.navbar-custom #sidemenu > .navbar-nav > li > a {
+    color : black;
+}
+
+.navbar-custom #sidemenu > .navbar-nav > li > a:focus, .navbar-custom #sidemenu > .navbar-nav > li > a:hover  {
+    color : white;
+}
+
 
 .navbar-custom #sidemenu ul > li > img {
     
@@ -39,6 +48,11 @@
 
 .jumbotron {
     height: 400px;
+    background-color:#77d3c4;
     background-image: url(/images/bestdog.jpg);
      background-repeat: no-repeat;
+}
+
+#page-wrapper .panel-green {
+    color:#77d3c4;
 }
