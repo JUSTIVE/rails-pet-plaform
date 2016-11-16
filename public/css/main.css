@@ -26,4 +26,13 @@
 
 .navbar-custom #sidemenu ul > li > img {
     
+    left: 50%;
+    margin-left: +50px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+.navbar-custom #sidemenu ul > li > .username {
+    left: 50%;
+    margin-left: +48px !important;
+    text-align: center;
 }
