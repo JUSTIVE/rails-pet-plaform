@@ -27,12 +27,18 @@
 .navbar-custom #sidemenu ul > li > img {
     
     left: 50%;
-    margin-left: +50px !important;  /* 50% of your logo width */
+    margin-left: +60px !important;  /* 50% of your logo width */
     display: block;
 }
 
 .navbar-custom #sidemenu ul > li > .username {
     left: 50%;
-    margin-left: +48px !important;
+    margin-left: +53px !important;
     text-align: center;
+}
+
+.jumbotron {
+    height: 400px;
+    background-image: url(/images/bestdog.jpg);
+     background-repeat: no-repeat;
 }

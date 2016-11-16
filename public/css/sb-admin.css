@@ -65,7 +65,7 @@ body {
 .top-nav>.open>a,
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
-    color: #fff;
+    color: #000;
     background-color: #000;
 }
 
@@ -138,6 +138,8 @@ ul.alert-dropdown {
         background-color: #000 !important;
     }
 }
+
+
 
 .side-nav>li>ul {
     padding: 0;

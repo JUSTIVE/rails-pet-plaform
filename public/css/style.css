@@ -147,8 +147,8 @@ body {
     background-color:#fff;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    color: #000;
-    background-color: #fff;
+    color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1);
 }
 .navbar-default .navbar-nav>li>a {
     color: #FFF;
