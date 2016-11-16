@@ -11,11 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116173712) do
+ActiveRecord::Schema.define(version: 20161116211704) do
+
+  create_table "bulletins", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "posttype_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
+    t.integer  "bulletin_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "posttypes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

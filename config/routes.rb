@@ -1,13 +1,24 @@
 Rails.application.routes.draw do
+
+  
   get 'home/index'
   
-  get 'post/list'
-  get 'post/new'
-  post 'post/create'
-  get "post/show/:id" => 'post#show'
-  get 'post/edit/:id' => 'post#edit'
-  get 'post/delete_complete/:id' => 'post#delete_complete'
-  post 'post/edit_complete'
+  get 'bulletin/:bulletin_id/posts/list' => 'post#list'
+  get 'bulletin/:bulletin_id/posts/new' => 'post#new'
+  post 'bulletin/:bulletin_id/posts/create' => 'post#create'
+  
+  get 'bulletin/:bulletin_id/posts/show/:id' => 'post#show'
+  get 'bulletin/:bulletin_id/posts/edit/:id' => 'post#edit'
+  get 'bulletin/:bulletin_id/posts/delete_complete/:id' => 'post#delete_complete'
+  post 'bulletin/:bulletin_id/posts/edit_complete' => 'post#edit_complete'
+  
+  get 'bulletin/index'
+  get 'bulletin/new'
+  post 'bulletin/create'
+  get "bulletin/show/:id" => 'bulletin#show'
+  get 'bulletin/edit/:id' => 'bulletin#edit'
+  get 'bulletin/delete_complete/:id' => 'bulletin#delete_complete'
+  post 'bulletin/edit_complete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

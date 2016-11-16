@@ -1,16 +1,20 @@
 class PostController < ApplicationController
+    
+    before_action :set_bulletin
+    before_action :set_post, only: [:show, :edit, :edit_complete, :delete_complete]
+    
     def new
-     @p = Post.all
+     @p = @bulletin.posts.all
     end
     
     def create
-        p = Post.new
+        p = @bulletin.posts.new
         p.title = params[:title]
         p.content = params[:content]
         
         if p.save
           flash[:alert] = "저장되었습니다."
-          redirect_to "/post/show/#{p.id}"
+          redirect_to "/bulletin/#{@bulletin.id}/posts/show/#{p.id}"
         else
           flash[:alert] = p.errors.values.flatten.join(' ')
           redirect_to :back
@@ -18,17 +22,17 @@ class PostController < ApplicationController
     end
     
     def edit
-        @post = Post.find(params[:id])
+        @post = @bulletin.posts.find(params[:id])
     end
     
     def edit_complete
-        p = Post.find(params[:id])
+        p = @bulletin.posts.find(params[:id])
         p.title = params[:title]
         p.content = params[:content]
         
         if p.save
           flash[:alert] = "수정되었습니다."
-          redirect_to "/post/show/#{p.id}"
+          redirect_to "/bulletin/#{@bulletin.id}/posts/show/#{p.id}"
         else
           flash[:alert] = p.errors.values.flatten.join(' ')
           redirect_to :back
@@ -36,17 +40,26 @@ class PostController < ApplicationController
     end
     
     def show
-        @post = Post.find(params[:id])
+        @post = @bulletin.posts.find(params[:id])
     end
     
     def list
-        @p = Post.all
+        @p = @bulletin.posts.all
     end
     
     def delete_complete
-        post = Post.find(params[:id])
+        post = @bulletin.posts.find(params[:id])
         post.destroy
         flash[:alert] = "삭제되었습니다."
-        redirect_to "/post/list"
+        redirect_to "/bulletin/#{@bulletin.id}/posts/list"
+    end
+    
+  private
+    def set_bulletin
+      @bulletin = Bulletin.find(params[:bulletin_id])
+    end
+
+    def set_post
+      @post = @bulletin.posts.find(params[:id])
     end
 end
