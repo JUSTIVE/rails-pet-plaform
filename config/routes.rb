@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   get 'home/index'
-
+  
+  get 'post/list'
+  get 'post/new'
+  post 'post/create'
+  get "post/show/:id" => 'post#show'
+  get 'post/edit/:id' => 'post#edit'
+  get 'post/delete_complete/:id' => 'post#delete_complete'
+  post 'post/edit_complete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
