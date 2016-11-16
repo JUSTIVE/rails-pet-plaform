@@ -1,0 +1,29 @@
+.navbar-custom {
+    color: #000000;
+    background-color: #33A2FF;
+}
+
+.navbar-custom .navbar-header {
+    color: #000000;
+}
+
+.navbar-custom ul .dropdown-toggle, .glyphicon {
+    color: #FFFFFF;
+}
+
+#text a {
+     color: #FFFFFF;
+}
+
+.navbar-custom ul > li > a:hover, .navbar-custom ul > li > a:focus, .navbar-custom #sidemenu > ul > li > a:hover, .navbar-custom #sidemenu > ul > li > a:focus {
+   background:rgba(210,105,30, 0.18); text-shadow:none;
+
+}
+
+.navbar-custom #sidemenu > .navbar-nav {
+    background-color: #F5F5F5;
+}
+
+.navbar-custom #sidemenu ul > li > img {
+    
+}
