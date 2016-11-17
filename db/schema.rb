@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116211704) do
+ActiveRecord::Schema.define(version: 20161117054252) do
 
   create_table "bulletins", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(version: 20161116211704) do
     t.integer  "posttype_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "cats", force: :cascade do |t|
+    t.string   "category"
+    t.string   "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dogs", force: :cascade do |t|
+    t.string   "category"
+    t.string   "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|

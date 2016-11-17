@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem "fog-aws"
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'nokogiri'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
