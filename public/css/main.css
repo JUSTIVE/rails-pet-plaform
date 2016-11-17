@@ -53,6 +53,16 @@
      background-repeat: no-repeat;
 }
 
+.jumbotron h1, h4 {
+    text-align: right;
+    color: white;
+}
+
+.jumbotron hr {
+    float: right;
+    width: 60%;
+}
+
 #page-wrapper .panel-green {
     color:#77d3c4;
 }

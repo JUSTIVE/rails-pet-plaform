@@ -11,7 +11,7 @@
         </div>
     
         <!-- 갤러리 레이아웃 -->
-        <div class="row">v
+        <div class="row">
             <% @p.each do |p| %>
                 <div class="title">
                     <%= p.title %>
@@ -21,6 +21,7 @@
                 </div>
                 <a href="">Otto</a>
                 <%= p.created_at %>
+                <a href="/bulletin/<%= p.bulletin_id %>/posts/delete_complete/<%= p.id %>" class="btn btn-default">삭제</a>
                 <hr>    
             <% end %>
         </div>

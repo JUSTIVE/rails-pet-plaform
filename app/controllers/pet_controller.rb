@@ -1,6 +1,10 @@
 
 require 'open-uri'
 class PetController < ApplicationController
+  def index
+    @c = Cat.all    
+    @d = Dog.all
+  end
   def get_dog
     i = 0
     doc = Nokogiri::HTML(open("http://terms.naver.com/entry.nhn?docId=1062053&cid=40942&categoryId=32624")) 

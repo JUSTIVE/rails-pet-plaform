@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
   get 'pet/get_dog'
+  get 'pet/index'
 
   get 'home/index'
   post 'bulletin/:bulletin_id/posts/upload' => 'post#upload'
