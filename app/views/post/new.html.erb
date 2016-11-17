@@ -4,14 +4,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    새 글 작성
+                    <%= @bulletin.title %> 새 글 작성
                 </h1>
             </div>
         </div>
         
         <div class="row">
             <div class="col-lg-5">
-                <form action="/bulletin/<%= @bulletin.id %>/posts/create" method="post">
+                <form action="/bulletin/<%= @bulletin.id %>/posts/create" method="post" enctype="multipart/form-data">
                     <div class="form-inputs">
                         <label>제목</label>
                         <input type="text" name="title" class="form-control">
@@ -21,6 +21,13 @@
                         <label>내용</label>
                         <textarea name="content" class="form-control" rows="10"></textarea>
                     </div>
+                    <br>
+                    <% if @bulletin.posttype.en == "gallery" %>
+                        <div class="form-inputs">
+                            <label>이미지</label>
+                            <input class="form-control" type="file" name="pic" accept="image/*">
+                        </div>
+                    <% end %>
                     <br>
                     <button type="submit" class="btn btn-default">작성 완료</button>
                 </form>

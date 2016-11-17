@@ -11,6 +11,13 @@ class PostController < ApplicationController
         p = @bulletin.posts.new
         p.title = params[:title]
         p.content = params[:content]
+   
+        
+        if @bulletin.posttype.en == "gallery"
+          file = params[:pic]
+          uploader = LightUploader.new
+          uploader.store!(file)
+        end
         
         if p.save
           flash[:alert] = "저장되었습니다."
@@ -52,6 +59,10 @@ class PostController < ApplicationController
         post.destroy
         flash[:alert] = "삭제되었습니다."
         redirect_to "/bulletin/#{@bulletin.id}/posts/list"
+    end
+    
+    def upload
+      
     end
     
   private

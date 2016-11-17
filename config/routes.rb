@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   
   get 'home/index'
-  
+  post 'bulletin/:bulletin_id/posts/upload' => 'post#upload'
   get 'bulletin/:bulletin_id/posts/list' => 'post#list'
   get 'bulletin/:bulletin_id/posts/new' => 'post#new'
   post 'bulletin/:bulletin_id/posts/create' => 'post#create'
